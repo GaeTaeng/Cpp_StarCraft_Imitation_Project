@@ -1,11 +1,14 @@
 #pragma once
+#include "Include.h"
+#include <list>
+
+using namespace std;
 class CObj
 {
+private:
+	static list<CObj*> CObjList;
 protected :
-	typedef struct tag_Point{
-		int iX;
-		int iY;
-	}Point;
+	char cName[32];
 	Point now_Pos;
 	Point to_Pos; //이동시 목적지
 	int iCreateTime; // 생산시간
@@ -34,7 +37,16 @@ protected :
 	int iMotion; //모션상태( (0)대기 중, (1)이동 중, (2)공격 중, (3)사망)
 	int iWay; //방향(8방향)
 
+public :
+	Point getPos();
+	char* getName();
 
+
+	bool be_attacked(int _damage);
+	int to_attack(CObj _obj);
+	bool move(int _x, int _y);
+	void to_move(int _x, int _y);
+	void show_status();
 public:
 	CObj(void);
 	~CObj(void);

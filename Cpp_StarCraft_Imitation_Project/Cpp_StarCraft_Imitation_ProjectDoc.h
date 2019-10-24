@@ -4,8 +4,10 @@
 
 
 #pragma once
+#include "Obj.h"
+#include <list>
 
-
+using namespace std;
 class CCpp_StarCraft_Imitation_ProjectDoc : public CDocument
 {
 protected: // serialization에서만 만들어집니다.
@@ -14,7 +16,7 @@ protected: // serialization에서만 만들어집니다.
 
 // 특성입니다.
 public:
-
+	list<CObj*> li_Obj;
 // 작업입니다.
 public:
 

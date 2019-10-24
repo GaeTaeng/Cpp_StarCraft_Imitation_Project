@@ -102,6 +102,7 @@
     <ClInclude Include="Cpp_StarCraft_Imitation_Project.h" />
     <ClInclude Include="Cpp_StarCraft_Imitation_ProjectDoc.h" />
     <ClInclude Include="Cpp_StarCraft_Imitation_ProjectView.h" />
+    <ClInclude Include="Include.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="Obj.h" />
     <ClInclude Include="Resource.h" />

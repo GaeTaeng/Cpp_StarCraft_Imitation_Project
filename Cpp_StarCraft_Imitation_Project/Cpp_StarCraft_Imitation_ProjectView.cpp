@@ -12,6 +12,10 @@
 #include "Cpp_StarCraft_Imitation_ProjectDoc.h"
 #include "Cpp_StarCraft_Imitation_ProjectView.h"
 
+
+//CObj이하 내용 include
+#include "Obj.h"
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -32,7 +36,6 @@ END_MESSAGE_MAP()
 CCpp_StarCraft_Imitation_ProjectView::CCpp_StarCraft_Imitation_ProjectView()
 {
 	// TODO: 여기에 생성 코드를 추가합니다.
-
 }
 
 CCpp_StarCraft_Imitation_ProjectView::~CCpp_StarCraft_Imitation_ProjectView()
@@ -49,13 +52,20 @@ BOOL CCpp_StarCraft_Imitation_ProjectView::PreCreateWindow(CREATESTRUCT& cs)
 
 // CCpp_StarCraft_Imitation_ProjectView 그리기
 
-void CCpp_StarCraft_Imitation_ProjectView::OnDraw(CDC* /*pDC*/)
+void CCpp_StarCraft_Imitation_ProjectView::OnDraw(CDC* pDC)
 {
 	CCpp_StarCraft_Imitation_ProjectDoc* pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
-	if (!pDoc)
-		return;
+	if (!pDoc) return;
 	
+	
+	for(list<CObj*>::iterator iter = pDoc->li_Obj.begin(); iter != pDoc->li_Obj.end(); ++iter) {
+		pDC->Ellipse((*iter)->getPos().iX-5, (*iter)->getPos().iY, (*iter)->getPos().iX+5, (*iter)->getPos().iY+5 )	;
+	}
+	
+
+
+
 	// TODO: 여기에 원시 데이터에 대한 그리기 코드를 추가합니다.
 }
 

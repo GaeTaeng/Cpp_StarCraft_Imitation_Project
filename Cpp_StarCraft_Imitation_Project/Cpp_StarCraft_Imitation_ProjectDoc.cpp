@@ -30,7 +30,7 @@ END_MESSAGE_MAP()
 CCpp_StarCraft_Imitation_ProjectDoc::CCpp_StarCraft_Imitation_ProjectDoc()
 {
 	// TODO: 여기에 일회성 생성 코드를 추가합니다.
-
+	li_Obj.push_back(new CObj());
 }
 
 CCpp_StarCraft_Imitation_ProjectDoc::~CCpp_StarCraft_Imitation_ProjectDoc()
