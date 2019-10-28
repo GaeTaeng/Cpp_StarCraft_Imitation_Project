@@ -7,6 +7,8 @@
 
 class CCpp_StarCraft_Imitation_ProjectView : public CView
 {
+private:
+	CCpp_StarCraft_Imitation_ProjectDoc* pDoc;
 protected: // serialization에서만 만들어집니다.
 	CCpp_StarCraft_Imitation_ProjectView();
 	DECLARE_DYNCREATE(CCpp_StarCraft_Imitation_ProjectView)
@@ -41,6 +43,7 @@ public:
 	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 	afx_msg void OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags);
 	afx_msg void OnDestroy();
+	afx_msg void OnRButtonDown(UINT nFlags, CPoint point);
 };
 
 #ifndef _DEBUG  // Cpp_StarCraft_Imitation_ProjectView.cpp의 디버그 버전

@@ -17,6 +17,8 @@ protected: // serialization에서만 만들어집니다.
 // 특성입니다.
 public:
 	list<CObj*> li_Obj;
+	list<CObj*> li_DragObj;
+
 // 작업입니다.
 public:
 

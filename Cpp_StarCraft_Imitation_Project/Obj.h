@@ -1,16 +1,16 @@
 #pragma once
 #include "Include.h"
 #include <list>
-
+#include <string>
 using namespace std;
 class CObj
 {
 private:
 	static list<CObj*> CObjList;
 protected :
-	char cName[32];
-	Point now_Pos;
-	Point to_Pos; //이동시 목적지
+	CString sName;
+	CPoint now_Pos;
+	CPoint to_Pos; //이동시 목적지
 	int iCreateTime; // 생산시간
 	int iAtt; //공격력
 	int iDef; //방어력
@@ -38,14 +38,16 @@ protected :
 	int iWay; //방향(8방향)
 
 public :
-	Point getPos();
-	char* getName();
+	CPoint getPos();
+	CString getName();
 
 
 	bool be_attacked(int _damage);
 	int to_attack(CObj _obj);
 	bool move(int _x, int _y);
 	void to_move(int _x, int _y);
+	bool move(CPoint _point);
+	void to_move(CPoint _point);
 	void show_status();
 public:
 	CObj(void);

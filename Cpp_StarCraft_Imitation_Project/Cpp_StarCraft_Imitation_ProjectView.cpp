@@ -29,6 +29,7 @@ BEGIN_MESSAGE_MAP(CCpp_StarCraft_Imitation_ProjectView, CView)
 	ON_WM_CREATE()
 	ON_WM_KEYUP()
 	ON_WM_DESTROY()
+	ON_WM_RBUTTONDOWN()
 END_MESSAGE_MAP()
 
 // CCpp_StarCraft_Imitation_ProjectView 생성/소멸
@@ -54,14 +55,17 @@ BOOL CCpp_StarCraft_Imitation_ProjectView::PreCreateWindow(CREATESTRUCT& cs)
 
 void CCpp_StarCraft_Imitation_ProjectView::OnDraw(CDC* pDC)
 {
-	CCpp_StarCraft_Imitation_ProjectDoc* pDoc = GetDocument();
+	pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
 	if (!pDoc) return;
 	
 	
 	for(list<CObj*>::iterator iter = pDoc->li_Obj.begin(); iter != pDoc->li_Obj.end(); ++iter) {
-		pDC->Ellipse((*iter)->getPos().iX-5, (*iter)->getPos().iY, (*iter)->getPos().iX+5, (*iter)->getPos().iY+5 )	;
+		pDC->Ellipse((*iter)->getPos().x-10, (*iter)->getPos().y-10, (*iter)->getPos().x+10, (*iter)->getPos().y+10 );
+		pDC->TextOutW((*iter)->getPos().x-10, (*iter)->getPos().y+10, ((*iter)->getName()));
 	}
+	
+
 	
 
 
@@ -118,4 +122,24 @@ void CCpp_StarCraft_Imitation_ProjectView::OnKeyUp(UINT nChar, UINT nRepCnt, UIN
 		DestroyWindow();
 	}
 	CView::OnKeyUp(nChar, nRepCnt, nFlags);
+}
+
+
+void CCpp_StarCraft_Imitation_ProjectView::OnRButtonDown(UINT nFlags, CPoint point)
+{
+	// TODO: 여기에 메시지 처리기 코드를 추가 및/또는 기본값을 호출합니다.
+	
+	pDoc = GetDocument();
+	ASSERT_VALID(pDoc);
+	if (!pDoc) return;
+	
+	
+	for(list<CObj*>::iterator iter = pDoc->li_DragObj.begin(); iter != pDoc->li_DragObj.end(); ++iter) {
+		(*iter)->to_move(point);
+	}
+	
+
+
+	Invalidate();
+	CView::OnRButtonDown(nFlags, point);
 }
