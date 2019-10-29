@@ -4,7 +4,7 @@
 
 CObj::CObj(void)
 {
-	sName = "None";
+	if(sName) sName = "None";
 	now_Pos.x = 10;
 	now_Pos.y = 10;
 	to_Pos.x = -1;
@@ -16,6 +16,14 @@ CObj::CObj(void)
 
 
 	iMotion = iWay = 0;
+}
+CObj::CObj(CString _name, CPoint _pos)
+{
+	sName = _name;
+	CObj();
+	now_Pos.x = _pos.x;
+	now_Pos.y = _pos.y;
+	
 }
 
 CPoint CObj::getPos(){
@@ -36,9 +44,14 @@ int CObj::to_attack(CObj _obj){
 
 
 bool CObj::move(int _x, int _y){
+	now_Pos.x += _x;
+	now_Pos.y += _y;
+
 	return true;
 }
 bool CObj::move(CPoint _point){
+	now_Pos.x += _point.x;
+	now_Pos.y += _point.y;
 	return true;
 }
 

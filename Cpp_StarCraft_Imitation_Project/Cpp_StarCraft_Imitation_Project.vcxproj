@@ -99,26 +99,32 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Building.h" />
     <ClInclude Include="Cpp_StarCraft_Imitation_Project.h" />
     <ClInclude Include="Cpp_StarCraft_Imitation_ProjectDoc.h" />
     <ClInclude Include="Cpp_StarCraft_Imitation_ProjectView.h" />
     <ClInclude Include="Include.h" />
     <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="MainGame.h" />
     <ClInclude Include="Obj.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="Unit.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Building.cpp" />
     <ClCompile Include="Cpp_StarCraft_Imitation_Project.cpp" />
     <ClCompile Include="Cpp_StarCraft_Imitation_ProjectDoc.cpp" />
     <ClCompile Include="Cpp_StarCraft_Imitation_ProjectView.cpp" />
     <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="MainGame.cpp" />
     <ClCompile Include="Obj.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Unit.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Cpp_StarCraft_Imitation_Project.rc" />

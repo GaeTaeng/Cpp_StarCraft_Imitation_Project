@@ -16,6 +16,15 @@
     <Filter Include="소스 파일\CObj">
       <UniqueIdentifier>{15a22c74-87de-4780-9bf5-d366dec253a7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\CObj\CBuilding">
+      <UniqueIdentifier>{28f2634e-18a3-43e9-8ea7-f4c124473dec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\CObj\CUnit">
+      <UniqueIdentifier>{0d2161e7-f89e-41a2-b955-88ba4ab63003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\CMainGame">
+      <UniqueIdentifier>{f7a5e99f-7736-4088-b194-c8d88ea252c5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -48,6 +57,15 @@
     <ClInclude Include="Include.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Building.h">
+      <Filter>소스 파일\CObj\CBuilding</Filter>
+    </ClInclude>
+    <ClInclude Include="Unit.h">
+      <Filter>소스 파일\CObj\CUnit</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame.h">
+      <Filter>소스 파일\CMainGame</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cpp_StarCraft_Imitation_Project.cpp">
@@ -67,6 +85,15 @@
     </ClCompile>
     <ClCompile Include="Obj.cpp">
       <Filter>소스 파일\CObj</Filter>
+    </ClCompile>
+    <ClCompile Include="Building.cpp">
+      <Filter>소스 파일\CObj\CBuilding</Filter>
+    </ClCompile>
+    <ClCompile Include="Unit.cpp">
+      <Filter>소스 파일\CObj\CUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame.cpp">
+      <Filter>소스 파일\CMainGame</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

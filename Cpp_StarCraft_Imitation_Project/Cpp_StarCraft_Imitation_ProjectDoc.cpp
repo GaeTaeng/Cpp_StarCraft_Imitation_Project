@@ -31,8 +31,10 @@ CCpp_StarCraft_Imitation_ProjectDoc::CCpp_StarCraft_Imitation_ProjectDoc()
 {
 	// TODO: 여기에 일회성 생성 코드를 추가합니다.
 	CObj* TestPlayer = new CObj();
-	li_Obj.push_back(TestPlayer);
+	li_Obj = CObj::getLiObj();
+	li_Obj->push_back(TestPlayer);
 	li_DragObj.push_back(TestPlayer);
+	printf("This DOC initialize !!\n");
 }
 
 CCpp_StarCraft_Imitation_ProjectDoc::~CCpp_StarCraft_Imitation_ProjectDoc()

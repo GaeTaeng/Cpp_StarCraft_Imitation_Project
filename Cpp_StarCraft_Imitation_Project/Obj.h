@@ -5,10 +5,15 @@
 using namespace std;
 class CObj
 {
+public:
+	static list<CObj*>* getLiObj() {
+		return &li_Obj;
+	}
 private:
-	static list<CObj*> CObjList;
+	static list<CObj*> li_Obj;
 protected :
 	CString sName;
+	
 	CPoint now_Pos;
 	CPoint to_Pos; //이동시 목적지
 	int iCreateTime; // 생산시간
@@ -49,8 +54,11 @@ public :
 	bool move(CPoint _point);
 	void to_move(CPoint _point);
 	void show_status();
+
+
 public:
 	CObj(void);
+	CObj(CString _name, CPoint _pos);
 	~CObj(void);
 };
 
