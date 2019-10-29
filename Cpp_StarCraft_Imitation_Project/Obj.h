@@ -5,12 +5,6 @@
 using namespace std;
 class CObj
 {
-public:
-	static list<CObj*>* getLiObj() {
-		return &li_Obj;
-	}
-private:
-	static list<CObj*> li_Obj;
 protected :
 	CString sName;
 	

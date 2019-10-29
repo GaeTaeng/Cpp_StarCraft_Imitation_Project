@@ -69,7 +69,7 @@ IMPLEMENT_DYNCREATE(CCpp_StarCraft_Imitation_ProjectView, CView)
 		//if(dwTime < GetTickCount()) {
 		if(1){
 
-			for(list<CObj*>::iterator iter = pDoc->li_Obj->begin(); iter != pDoc->li_Obj->end(); ++iter) {
+			for(list<CObj*>::iterator iter = pDoc->li_Obj.begin(); iter != pDoc->li_Obj.end(); ++iter) {
 				pDC->Ellipse((*iter)->getPos().x-10, (*iter)->getPos().y-10, (*iter)->getPos().x+10, (*iter)->getPos().y+10 );
 				pDC->TextOutW((*iter)->getPos().x-10, (*iter)->getPos().y+10, ((*iter)->getName()));
 			}
