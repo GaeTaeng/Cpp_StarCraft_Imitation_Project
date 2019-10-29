@@ -1,4 +1,5 @@
 
+*.app
 *.opensdf
 *.slo
 *.lo
@@ -13,4 +14,11 @@
 *.lib
 *.exe
 *.out
-*.app
+*.tlog
+*.log
+
+*.pdb
+*.res
+*.idb
+*.ilk
+*.pch
