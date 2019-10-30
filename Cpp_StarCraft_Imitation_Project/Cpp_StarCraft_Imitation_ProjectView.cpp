@@ -47,6 +47,7 @@ IMPLEMENT_DYNCREATE(CCpp_StarCraft_Imitation_ProjectView, CView)
 
 	CCpp_StarCraft_Imitation_ProjectView::~CCpp_StarCraft_Imitation_ProjectView()
 	{
+
 	}
 
 	BOOL CCpp_StarCraft_Imitation_ProjectView::PreCreateWindow(CREATESTRUCT& cs)
@@ -61,11 +62,9 @@ IMPLEMENT_DYNCREATE(CCpp_StarCraft_Imitation_ProjectView, CView)
 
 	void CCpp_StarCraft_Imitation_ProjectView::OnDraw(CDC* pDC)
 	{
-
 		pDoc = GetDocument();
 		ASSERT_VALID(pDoc);
 		if (!pDoc) return;
-
 
 
 		pInstance = CMainGame::getInstance();
@@ -73,28 +72,15 @@ IMPLEMENT_DYNCREATE(CCpp_StarCraft_Imitation_ProjectView, CView)
 
 		DWORD	dwTime = GetTickCount();
 
-		printf("dwTime :: %ld\n", dwTime);
-		printf(" GetTickCount :: %ld\n",  GetTickCount());
+		//printf("dwTime :: %ld\n", dwTime);
+		//printf(" GetTickCount :: %ld\n",  GetTickCount());
 		//if(dwTime < GetTickCount()) {
 		pInstance->Render(pDC);
 		Invalidate();
 		//}
 
 
-		printf("dwTime :: %ld\n", dwTime);
-
-
-
-
-
-
-		
-
-
-
-
-		
-		
+		//printf("dwTime :: %ld\n", dwTime);
 
 		// TODO: 여기에 원시 데이터에 대한 그리기 코드를 추가합니다.
 	}
@@ -137,7 +123,7 @@ IMPLEMENT_DYNCREATE(CCpp_StarCraft_Imitation_ProjectView, CView)
 	void CCpp_StarCraft_Imitation_ProjectView::OnDestroy()
 	{
 		CView::OnDestroy();
-
+		AfxGetMainWnd()->PostMessageW(WM_COMMAND, ID_APP_EXIT, 0);
 		// TODO: 여기에 메시지 처리기 코드를 추가합니다.
 	}
 
@@ -166,6 +152,7 @@ IMPLEMENT_DYNCREATE(CCpp_StarCraft_Imitation_ProjectView, CView)
 	{
 		// TODO: 여기에 메시지 처리기 코드를 추가 및/또는 기본값을 호출합니다.
 		if(nChar == VK_ESCAPE) {
+			PostQuitMessage(0);
 			DestroyWindow();
 		}
 
@@ -175,6 +162,10 @@ IMPLEMENT_DYNCREATE(CCpp_StarCraft_Imitation_ProjectView, CView)
 
 	void CCpp_StarCraft_Imitation_ProjectView::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 	{
+		if(nChar == VK_ESCAPE) {
+			PostQuitMessage(0);
+			DestroyWindow();
+		}
 		// TODO: 여기에 메시지 처리기 코드를 추가 및/또는 기본값을 호출합니다.
 		if(nChar == VK_UP) {
 

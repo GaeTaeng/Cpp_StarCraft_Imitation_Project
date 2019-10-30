@@ -20,8 +20,6 @@ void CMainGame::Initialize(){
 }
 void CMainGame::Progress(){
 
-
-
 }
 void CMainGame::Render(CDC* pDC){
 	CMainFrame *pFrame = (CMainFrame*)AfxGetMainWnd();
@@ -29,11 +27,6 @@ void CMainGame::Render(CDC* pDC){
 
 	CCpp_StarCraft_Imitation_ProjectDoc* pDoc = (CCpp_StarCraft_Imitation_ProjectDoc*)pFrame->GetActiveDocument();
 
-
-
-
-
-	
 
 
 	for(list<CObj*>::iterator iter = pDoc->li_Obj.begin(); iter != pDoc->li_Obj.end(); ++iter) {

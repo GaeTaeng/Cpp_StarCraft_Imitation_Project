@@ -38,6 +38,10 @@ CCpp_StarCraft_Imitation_ProjectDoc::CCpp_StarCraft_Imitation_ProjectDoc()
 
 CCpp_StarCraft_Imitation_ProjectDoc::~CCpp_StarCraft_Imitation_ProjectDoc()
 {
+	
+	for(list<CObj*>::iterator iter = li_Obj.begin(); iter != li_Obj.end(); ++iter) {
+		free(*iter);
+	}
 }
 
 BOOL CCpp_StarCraft_Imitation_ProjectDoc::OnNewDocument()
