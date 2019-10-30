@@ -1,20 +1,10 @@
-﻿빌드 시작: 2019-10-29 오후 11:38:41
+﻿빌드 시작: 2019-10-30 오후 3:10:00
      1>2 노드의 "F:\Git\Cpp_StarCraft_Imitation_Project\Cpp_StarCraft_Imitation_Project\Cpp_StarCraft_Imitation_Project\Cpp_StarCraft_Imitation_Project.vcxproj" 프로젝트(Build 대상)입니다.
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\Cpp_StarCraft_Imitation_Project.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
-         stdafx.cpp
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Cpp_StarCraft_Imitation_Project.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Building.cpp Cpp_StarCraft_Imitation_Project.cpp Cpp_StarCraft_Imitation_ProjectDoc.cpp Cpp_StarCraft_Imitation_ProjectView.cpp MainFrm.cpp MainGame.cpp Obj.cpp Unit.cpp
-         Unit.cpp
-         Obj.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Cpp_StarCraft_Imitation_Project.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Cpp_StarCraft_Imitation_ProjectView.cpp MainGame.cpp
          MainGame.cpp
-         MainFrm.cpp
          Cpp_StarCraft_Imitation_ProjectView.cpp
-         Cpp_StarCraft_Imitation_ProjectDoc.cpp
-         Cpp_StarCraft_Imitation_Project.cpp
-         Building.cpp
          코드를 생성하고 있습니다...
-       ResourceCompile:
-         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\rc.exe /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /l"0x0412" /IDebug\ /nologo /fo"Debug\Cpp_StarCraft_Imitation_Project.res" Cpp_StarCraft_Imitation_Project.rc 
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\Git\Cpp_StarCraft_Imitation_Project\Cpp_StarCraft_Imitation_Project\Debug\Cpp_StarCraft_Imitation_Project.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"F:\Git\Cpp_StarCraft_Imitation_Project\Cpp_StarCraft_Imitation_Project\Debug\Cpp_StarCraft_Imitation_Project.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Git\Cpp_StarCraft_Imitation_Project\Cpp_StarCraft_Imitation_Project\Debug\Cpp_StarCraft_Imitation_Project.lib" /MACHINE:X86 Debug\Cpp_StarCraft_Imitation_Project.res
          Debug\Building.obj
@@ -40,4 +30,4 @@
 
 빌드했습니다.
 
-경과 시간: 00:00:09.93
+경과 시간: 00:00:02.73

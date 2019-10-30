@@ -3,12 +3,14 @@
 //
 
 #pragma once
-
+#include "MainGame.h"
 
 class CCpp_StarCraft_Imitation_ProjectView : public CView
 {
 private:
+	CMainGame* pInstance;
 	CCpp_StarCraft_Imitation_ProjectDoc* pDoc;
+	
 protected: // serialization에서만 만들어집니다.
 	CCpp_StarCraft_Imitation_ProjectView();
 	DECLARE_DYNCREATE(CCpp_StarCraft_Imitation_ProjectView)

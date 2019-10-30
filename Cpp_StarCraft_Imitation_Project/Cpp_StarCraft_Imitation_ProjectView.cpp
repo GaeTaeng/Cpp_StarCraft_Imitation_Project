@@ -15,6 +15,10 @@
 
 //CObj이하 내용 include
 #include "Obj.h"
+#include "MainGame.h"
+
+
+
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -38,6 +42,7 @@ IMPLEMENT_DYNCREATE(CCpp_StarCraft_Imitation_ProjectView, CView)
 	CCpp_StarCraft_Imitation_ProjectView::CCpp_StarCraft_Imitation_ProjectView()
 	{
 		// TODO: 여기에 생성 코드를 추가합니다.
+
 	}
 
 	CCpp_StarCraft_Imitation_ProjectView::~CCpp_StarCraft_Imitation_ProjectView()
@@ -56,32 +61,40 @@ IMPLEMENT_DYNCREATE(CCpp_StarCraft_Imitation_ProjectView, CView)
 
 	void CCpp_StarCraft_Imitation_ProjectView::OnDraw(CDC* pDC)
 	{
+
 		pDoc = GetDocument();
 		ASSERT_VALID(pDoc);
 		if (!pDoc) return;
 
 
 
+		pInstance = CMainGame::getInstance();
+		//Main으로 돌릴 곳  SingleTurn Pattern 으로
+
 		DWORD	dwTime = GetTickCount();
 
 		printf("dwTime :: %ld\n", dwTime);
 		printf(" GetTickCount :: %ld\n",  GetTickCount());
 		//if(dwTime < GetTickCount()) {
-		if(1){
+		pInstance->Render(pDC);
+		Invalidate();
+		//}
 
-			for(list<CObj*>::iterator iter = pDoc->li_Obj.begin(); iter != pDoc->li_Obj.end(); ++iter) {
-				pDC->Ellipse((*iter)->getPos().x-10, (*iter)->getPos().y-10, (*iter)->getPos().x+10, (*iter)->getPos().y+10 );
-				pDC->TextOutW((*iter)->getPos().x-10, (*iter)->getPos().y+10, ((*iter)->getName()));
-			}
 
-			printf("dwTime :: %ld\n", dwTime);
-			Invalidate();
-		}
+		printf("dwTime :: %ld\n", dwTime);
 
 
 
 
 
+
+		
+
+
+
+
+		
+		
 
 		// TODO: 여기에 원시 데이터에 대한 그리기 코드를 추가합니다.
 	}
