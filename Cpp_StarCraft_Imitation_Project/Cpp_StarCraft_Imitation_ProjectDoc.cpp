@@ -12,7 +12,7 @@
 #include "Cpp_StarCraft_Imitation_ProjectDoc.h"
 
 #include <propkey.h>
-
+#include "Enum.h"
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -30,7 +30,7 @@ END_MESSAGE_MAP()
 CCpp_StarCraft_Imitation_ProjectDoc::CCpp_StarCraft_Imitation_ProjectDoc()
 {
 	// TODO: 여기에 일회성 생성 코드를 추가합니다.
-	CObj* TestPlayer = new CObj();
+	CObj* TestPlayer = new CObj(OBJ_PROVE, 10, 20);
 	li_Obj.push_back(TestPlayer);
 	li_DragObj.push_back(TestPlayer);
 	printf("This DOC initialize !!\n");

@@ -103,9 +103,11 @@
     <ClInclude Include="Cpp_StarCraft_Imitation_Project.h" />
     <ClInclude Include="Cpp_StarCraft_Imitation_ProjectDoc.h" />
     <ClInclude Include="Cpp_StarCraft_Imitation_ProjectView.h" />
+    <ClInclude Include="Enum.h" />
     <ClInclude Include="Include.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="MainGame.h" />
+    <ClInclude Include="Mouse.h" />
     <ClInclude Include="Obj.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
@@ -119,6 +121,7 @@
     <ClCompile Include="Cpp_StarCraft_Imitation_ProjectView.cpp" />
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="MainGame.cpp" />
+    <ClCompile Include="Mouse.cpp" />
     <ClCompile Include="Obj.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

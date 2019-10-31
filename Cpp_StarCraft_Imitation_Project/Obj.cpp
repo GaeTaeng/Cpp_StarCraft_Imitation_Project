@@ -4,9 +4,9 @@
 
 CObj::CObj(void)
 {
-	if(sName) sName = "None";
-	now_Pos.x = 10;
-	now_Pos.y = 10;
+	sName = "None";
+	now_Pos.x = -1;
+	now_Pos.y = -1;
 	to_Pos.x = -1;
 	to_Pos.y = -1;
 
@@ -17,12 +17,21 @@ CObj::CObj(void)
 
 	iMotion = iWay = 0;
 }
-CObj::CObj(CString _name, CPoint _pos)
+CObj::CObj(int _type, CPoint _pos)
 {
-	sName = _name;
 	CObj();
-	now_Pos.x = _pos.x;
-	now_Pos.y = _pos.y;
+	sName = sNameArray[_type];
+	now_Pos = _pos;
+	
+}
+
+
+CObj::CObj(int _type, int _x, int _y)
+{
+	CObj();
+	sName = sNameArray[_type];
+	now_Pos.x = _x;
+	now_Pos.y = _y;
 	
 }
 

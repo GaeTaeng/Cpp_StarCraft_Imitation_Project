@@ -3,8 +3,12 @@
 #include <list>
 #include <string>
 using namespace std;
+static CString sNameArray[256]= {L"None", L"Nexus", L"GateWay", L"StarGate",  L"Prove", L"Zealot", L"Dragoon", L"DarkTemplar", L"HighTemplar"};
+
 class CObj
 {
+	
+	
 protected :
 	CString sName;
 	
@@ -52,7 +56,8 @@ public :
 
 public:
 	CObj(void);
-	CObj(CString _name, CPoint _pos);
+	CObj(int _type, CPoint _pos);
+	CObj(int _type, int _x, int _y);
 	~CObj(void);
 };
 

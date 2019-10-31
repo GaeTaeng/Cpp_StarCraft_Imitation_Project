@@ -25,6 +25,9 @@
     <Filter Include="소스 파일\CMainGame">
       <UniqueIdentifier>{f7a5e99f-7736-4088-b194-c8d88ea252c5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\CMouse">
+      <UniqueIdentifier>{3f4d3b43-1bce-468e-909d-9bfadd3733f5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -66,6 +69,12 @@
     <ClInclude Include="MainGame.h">
       <Filter>소스 파일\CMainGame</Filter>
     </ClInclude>
+    <ClInclude Include="Enum.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Mouse.h">
+      <Filter>소스 파일\CMouse</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cpp_StarCraft_Imitation_Project.cpp">
@@ -94,6 +103,9 @@
     </ClCompile>
     <ClCompile Include="MainGame.cpp">
       <Filter>소스 파일\CMainGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Mouse.cpp">
+      <Filter>소스 파일\CMouse</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

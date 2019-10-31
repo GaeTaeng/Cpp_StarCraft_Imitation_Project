@@ -150,6 +150,7 @@ IMPLEMENT_DYNCREATE(CCpp_StarCraft_Imitation_ProjectView, CView)
 
 	void CCpp_StarCraft_Imitation_ProjectView::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)
 	{
+
 		// TODO: 여기에 메시지 처리기 코드를 추가 및/또는 기본값을 호출합니다.
 		if(nChar == VK_ESCAPE) {
 			PostQuitMessage(0);
@@ -166,6 +167,7 @@ IMPLEMENT_DYNCREATE(CCpp_StarCraft_Imitation_ProjectView, CView)
 			PostQuitMessage(0);
 			DestroyWindow();
 		}
+		/*
 		// TODO: 여기에 메시지 처리기 코드를 추가 및/또는 기본값을 호출합니다.
 		if(nChar == VK_UP) {
 
@@ -197,5 +199,6 @@ IMPLEMENT_DYNCREATE(CCpp_StarCraft_Imitation_ProjectView, CView)
 				(*iter)->move(0, 10);
 			}
 		}
+		*/
 		CView::OnKeyDown(nChar, nRepCnt, nFlags);
 	}
