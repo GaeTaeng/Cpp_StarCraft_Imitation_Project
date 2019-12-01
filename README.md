@@ -8,3 +8,4 @@
 깃허브를 알기 이전에 제작하였던 스타크래프트의 모작 소스파일이 사라져
 새롭게 제작하여봅니다.
 
+[![Video Label](http://img.youtube.com/watch?v=K325UMU-BvA/0.jpg)](https://www.youtube.com/watch?v=K325UMU-BvA)
